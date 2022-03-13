@@ -1,6 +1,7 @@
 package com.example.antontestapp.base
 
 import android.app.Application
+import com.example.antontestapp.mainscreen.di.AppModule
 import com.example.antontestapp.mainscreen.di.DaggerAppComponent
 import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
@@ -14,7 +15,11 @@ class AntonTestApplication: Application(), HasAndroidInjector {
 
     override fun onCreate() {
         super.onCreate()
-        DaggerAppComponent.builder().build().inject(this)
+        DaggerAppComponent
+            .builder()
+            .appModule(AppModule(this))
+            .build()
+            .inject(this)
     }
 
     override fun androidInjector(): AndroidInjector<Any> {

@@ -36,6 +36,6 @@ class MainFragment : BaseViewBindingFragment<FragmentMainBinding>() {
 
     override fun onStart() {
         super.onStart()
-//        ui.testGetVm()
+        ui.testGetVm()
     }
 }

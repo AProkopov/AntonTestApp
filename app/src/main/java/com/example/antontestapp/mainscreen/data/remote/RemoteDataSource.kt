@@ -11,7 +11,7 @@ class RemoteDataSource @Inject constructor(
 ) {
 
     companion object {
-        private const val BASE_URL = "well it is our base url"
+        private const val BASE_URL = "https://stackoverflow.com/"
     }
 
     fun <Api> buildApi(

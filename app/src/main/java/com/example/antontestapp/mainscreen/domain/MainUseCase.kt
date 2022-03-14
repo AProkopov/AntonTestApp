@@ -7,6 +7,6 @@ class MainUseCase @Inject constructor(
     private val remoteService: RemoteService
 ){
 
-    fun getData() = remoteService.getData()
+    fun getData() = remoteService.getDataC()
 
 }

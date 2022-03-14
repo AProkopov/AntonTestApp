@@ -2,6 +2,8 @@ buildscript {
     ext.dagger_version = "2.35.1"
     ext.retrofit_version = "2.9.0"
     ext.okhttp_version = "4.9.0"
+    ext.rx_version = "2.2.19"
+    ext.rx_android_version = "2.1.1"
 }
 
 plugins {
@@ -66,6 +68,10 @@ dependencies {
     //OkHttp
     implementation "com.squareup.okhttp3:okhttp:${okhttp_version}"
     implementation "com.squareup.okhttp3:logging-interceptor:${okhttp_version}"
+
+    //Rx
+    implementation "io.reactivex.rxjava2:rxjava:${rx_version}"
+    implementation "io.reactivex.rxjava2:rxandroid:${rx_android_version}"
 
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'

@@ -1,10 +1,12 @@
 package com.example.antontestapp.mainscreen.domain
 
-import com.example.antontestapp.mainscreen.data.remote.RemoteApi
+import com.example.antontestapp.mainscreen.data.remote.RemoteService
 import javax.inject.Inject
 
 class MainUseCase @Inject constructor(
-    private val api: RemoteApi
+    private val remoteService: RemoteService
 ){
-    fun testGetApi() = api
+
+    fun getData() = remoteService.getData()
+
 }
